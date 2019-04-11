@@ -60,7 +60,7 @@ function formatWSS(link, user_id, server_id) {
         naddrWS = gsearch.protocol.replace('https:', 'wss:').replace('http:', 'ws:') + '//' + gsearch.host + '/channel/',
         channel = user_id % 32;
 
-    let URLWS = naddrWS + channel + '/' + gsearch.search + '&ver=1&pass='.concat(Entit.hashPassCoin(user_id, 0));
+    let URLWS = naddrWS + channel + '/' + gsearch.search + '&ver=1&upd=1&pass='.concat(Entit.hashPassCoin(user_id, 0));
     let srv = /([\w-]+\.)*vkforms\.ru/;
     return URLWS.replace(srv, SERVERS[server_id]);
 }
